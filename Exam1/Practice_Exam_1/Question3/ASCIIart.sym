@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	COLUMNLOOP        300D
+//	LINELOOP          300F
+//	NEXT_LINE         3015
+//	TRAPP             3019
+//	IMAGEADDR         301A
+//	NEWCHAR           301B
+

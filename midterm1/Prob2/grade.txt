@@ -1,0 +1,25 @@
+Compilation Results:
+********************
+STARTING PASS 1
+0 errors found in first pass.
+STARTING PASS 2
+0 errors found in second pass.
+STARTING PASS 1
+0 errors found in first pass.
+STARTING PASS 2
+0 errors found in second pass.
+STARTING PASS 1
+0 errors found in first pass.
+STARTING PASS 2
+0 errors found in second pass.
+
+Test Input x00AC: R6 should be x002D for full points
+R6=x002D
+Test Input x0077: R6 should be x00F5 for full points
+R6=x00F5
+Test Input x006D: R6 should be x00AB for full points
+R6=x00AB
+
+Grade:
+******
+Functionality: 30 

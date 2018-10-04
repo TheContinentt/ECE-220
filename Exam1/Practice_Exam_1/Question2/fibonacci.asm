@@ -1,0 +1,44 @@
+.ORIG x3000
+
+LD R1, INPUT    
+JSR FIBON
+ST R6, RESULT
+HALT
+
+;your code goes here
+FIBON
+		AND R2, R2, #0
+		AND R3, R3, #0
+		AND R4, R4, #0
+		LD R0, DATAA
+		NOT R0, R0
+		ADD R0, R0, #1
+		ADD R0, R1, R0
+		BRp OUTNONE
+		ADD R0, R1, #0
+		ADD R0, R0, #-2
+		BRnz OUTONEE
+		ADD R1, R1, #-2
+		ADD R2, R2, #1
+		ADD R3, R3, #1
+LOOPP	ADD R4, R2, R3
+		ADD R2, R3, #0
+		ADD R3, R4, #0
+		ADD R1, R1, #-1
+		BRp LOOPP
+		ADD R6, R4, #0
+		ADD R1, R1, #0
+		BRz RRET
+
+OUTNONE	AND R6, R6, #0
+		ADD R6, R6, #-1
+		BRnzp RRET
+OUTONEE	AND R6, R6, #0
+		ADD R6, R6, #1
+		BRnzp RRET
+RRET	RET
+
+INPUT 	.FILL x0005
+DATAA	.FILL x0019
+RESULT	.BLKW #1
+.END

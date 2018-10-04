@@ -1,0 +1,13 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	FIBON             3004
+//	LOOPP             3012
+//	OUTNONE           301A
+//	OUTONEE           301D
+//	RRET              3020
+//	INPUT             3021
+//	DATAA             3022
+//	RESULT            3023
+

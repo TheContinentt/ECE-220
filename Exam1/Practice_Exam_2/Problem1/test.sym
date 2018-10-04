@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	POLL              3006
+//	POLLL             3009
+//	KBSR              300F
+//	KBDR              3010
+//	DSR               3011
+//	DDR               3012
+

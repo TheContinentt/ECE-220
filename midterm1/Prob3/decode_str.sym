@@ -1,0 +1,22 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	NEXTT             3001
+//	OUTT              300C
+//	RRR               3014
+//	NNN               3019
+//	DECRE             3024
+//	NUMMM             302A
+//	ZEROO             3034
+//	NTT               3034
+//	TRAPP             303D
+//	ASCII_ZERO        303E
+//	ASCII_NINE        303F
+//	ASCII_NEG_ASTERISK  3040
+//	ASCII_NEG_ZERO    3041
+//	STRING_START      3042
+//	SAVE_R6           3043
+//	SAVE_NUM          3044
+//	SAVE_R66          3045
+

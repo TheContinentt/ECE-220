@@ -1,0 +1,11 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	INIT_REGS         3000
+//	COUNTT            300B
+//	ZEROO             3013
+//	OUTT              3014
+//	INPUT_ADDRESS     3019
+//	OUTPUT_VALUE      301A
+

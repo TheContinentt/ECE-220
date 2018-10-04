@@ -1,0 +1,26 @@
+.ORIG x3000
+
+;your program starts here			
+		AND R1, R1, #0			;COUNTER OF DIGITS
+		AND R4, R4, #0
+		AND R3, R3, #0
+		AND R6, R6, #0
+		AND R0, R0, #0
+		ADD R3, R3, #10
+
+
+POLL		LDI R0, KBSR
+		BRzp POLL
+		LDI R0, KBDR
+
+POLLL		LDI R1, DSR
+		BRzp POLLL
+		STI R0, DDR
+		ADD R3, R3, #-1
+		BRzp POLL
+		TRAP x25
+KBSR    .FILL xFE00
+KBDR    .FILL xFE02
+DSR     .FILL xFE04
+DDR     .FILL xFE06
+.END  

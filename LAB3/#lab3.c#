@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define pi=3.1415
+int main(){
+  // Start your code here
+  int n, z, y;
+  int a;
+  double x;
+  
+}
+

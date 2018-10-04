@@ -1,0 +1,27 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	POLL              3007
+//	VALID             301D
+//	INVALID           301F
+//	STORE             3021
+//	FINISHH           3026
+//	FINISH            302C
+//	SUCCESS           302E
+//	FAIL              3039
+//	TRAPP             303D
+//	KBSR              303E
+//	KBDR              303F
+//	DSR               3040
+//	DDR               3041
+//	INV_MSG           3042
+//	VAL_MSG           3058
+//	ZERO_CHAR         306C
+//	NINE_CHAR         306D
+//	NEW_CHAR          306E
+//	NEW_CHARR         306F
+//	STOREE            3070
+//	VALUE             3071
+//	SCHAR             3072
+

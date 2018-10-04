@@ -1,0 +1,22 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	INVALID           3013
+//	TRAPP             3014
+//	PSquare           3015
+//	NEXTT             3018
+//	SQUARE            3026
+//	MULT              302A
+//	SSQUARE           3030
+//	LLP               3032
+//	SAVE_R2           3037
+//	SAVE_R7           3038
+//	SAVE_RR7          3039
+//	SAVEE_R2          303A
+//	SAVE_R1           303B
+//	SAVE_R4           303C
+//	SAVE_RR4          303D
+//	SAVE_R5           303E
+//	SAVE_R6           303F
+

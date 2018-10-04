@@ -1,0 +1,15 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	NEWDIGITS         3006
+//	NEWBITS           300B
+//	PRINTR            3011
+//	LEFTSHIFTR        3012
+//	PRINTOUT          3015
+//	POSITIVE          3019
+//	OUTPUTR           301A
+//	ASCII             3023
+//	OUTPUT            3027
+//	HALTTT            302A
+

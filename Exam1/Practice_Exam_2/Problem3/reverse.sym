@@ -1,0 +1,21 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	OUTLOOP           3006
+//	TRAPP             300E
+//	REVERSE           300F
+//	CHANGE            3014
+//	SWAPMEM           3023
+//	NUM_ADDR          3032
+//	CHAR_ADDR         3033
+//	SAVE_R0           3034
+//	SAVE_R1           3035
+//	SAVE_R7           3036
+//	SAVE_R2           3037
+//	SAVE_R4           3038
+//	SAVE_RR2          3039
+//	SSAVE_R0          303A
+//	SSAVE_R1          303B
+//	NEW_CHAR          303C
+

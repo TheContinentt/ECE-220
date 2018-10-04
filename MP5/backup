@@ -1,0 +1,634 @@
+int v, vv, vvv, vvvv, vvvvv;
+	char postt[2] = {0,0};
+	int r = 0;
+	int counterr = 0;
+	int pc = 0;
+	int mc = 0;
+	int p = 0;
+	int pp = 0;
+	int ppp = 0;
+	int pppp = 0; 
+	sscanf(guess_str, "%d%d%d%d%1s%d",&v, &vv, &vvv, &vvvv, postt, &vvvvv);
+	if (vvvvv != 0)
+	{
+	r = 0;
+	}
+	else if (vvvvv == 0)
+	{
+		if (postt[0] != 0)
+		{
+		r = 0;
+		}
+		else 
+		{
+			if (v > 8 || v < 0)
+			{
+			counterr = counterr;
+			}
+			else 
+			{
+			counterr = counterr + 1;
+			}
+			if (vv > 8 || vv < 0)
+			{
+			counterr = counterr;
+			}
+			else
+			{
+			counterr = counterr + 1;
+			}
+			if (vvv > 8 || vvv < 0)
+			{
+			counterr = counterr;
+			}
+			else
+			{
+			counterr = counterr + 1;
+			}
+			if (vvvv > 8 || vvvv < 0)
+			{
+			counterr = counterr;
+			}
+			else
+			{
+			counterr = counterr + 1;
+			}
+			if (counterr == 4)
+			{
+			r = 1;
+			}
+			else
+			{
+			r = 0;
+			}
+		}
+	}
+	if (r == 0)
+	{
+	printf("make_guess: invalid guess\n");
+	}
+	else if (r == 1)
+	{
+	one = &v;
+	two = &vv;
+	three = &vvv;
+	four = &vvvv;
+		if (*one == solution1)
+		{
+		pc = pc + 1;
+		p = 1;
+		}
+		if (*two == solution2)
+		{
+		pc = pc + 1;
+		pp = 1;
+		}
+		if (*three == solution3)
+		{
+		pc = pc + 1;
+		ppp = 1;
+		}
+		if (*four == solution4)
+		{
+		pc = pc + 1;
+		pppp = 1;
+		}
+		printf("%d   %d   %d   %d\n", p, pp, ppp, pppp);
+		if (p == 1)
+		{
+			if (pp == 1)
+			{
+				if (ppp == 1)
+				{
+				mc = 0;
+				}
+				else 
+				{
+					if (pppp == 1)
+					{
+					mc = 0;
+					}
+					else
+					{
+						if (*three == solution4)
+						{
+						mc = mc + 1;
+						}
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+						}
+					}
+				}
+			}
+			else if (pp == 0)
+			{
+				if (ppp == 1 && pppp == 1)
+				{
+				mc = 0;
+				}
+				else if (ppp == 1 && pppp == 0)
+				{
+					if (*two == solution4)
+					{
+					mc = mc + 1;
+					}
+					if (*four == solution2)
+					{
+					mc = mc + 1;
+					}
+				}
+				else if (pppp == 1 && ppp == 0)
+				{
+					if (*two == solution3)
+					{
+					mc = mc + 1;
+					}
+					if (*three == solution2)
+					{
+					mc = mc + 1;
+					}
+				}
+				else
+				{
+					if (*two == solution3)
+					{
+					mc = mc + 1;
+						if (*three == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+						}
+						if (*three == solution2)
+						{
+						mc = mc + 1;
+						}
+					}
+					else if (*two == solution4)
+					{
+					mc = mc + 1;
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+							if (*three == solution2)
+							{
+							mc = mc + 1;
+							}
+						}
+						else if (*four == solution2)
+						{
+						mc = mc + 1;
+						}
+					}
+				}
+			}
+		}
+		else if (p == 0)
+		{
+			if (pp == 0)
+			{
+				if (ppp == 1 && pppp == 1)
+				{
+					if (*one == solution2)
+					{
+					mc = mc + 1;
+					}
+					if (*two == solution1)				
+					{
+					mc = mc + 1;
+					}
+				}
+				else if (ppp == 1 && pppp == 0)
+				{
+					if (*one == solution2)
+					{
+					mc = mc + 1;
+						if (*two == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*two == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					else if (*one == solution4)
+					{
+					mc = mc + 1;
+						if (*four == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*four == solution2)
+						{
+						mc = mc + 1;
+							if (*two == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+				}
+				else if (pppp == 1 && ppp == 0)
+				{
+					if (*one == solution2)
+					{
+					mc = mc + 1;
+						if (*two == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*two == solution3)
+						{
+						mc = mc + 1;
+							if (*three == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					else if (*one == solution3)
+					{
+					mc = mc + 1;
+						if (*three == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*three == solution2)
+						{
+						mc = mc + 1;
+							if (*two == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+				}	
+				else if (ppp == 0 && pppp == 0)
+				{
+				printf("%d\n", solution3);
+				printf("%d\n", *two);
+					if (*one == solution2)
+					{
+					mc = mc + 1;
+						if (*two == solution3)
+						{
+						mc = mc + 1;
+						printf("   %d\n", mc);printf("%d\n",solution1);
+						printf("   %d\n", *three);
+							if (*three == solution4)
+							{
+							mc = mc + 1;
+								if (*four == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+							else if (*three == solution1)
+							{
+							mc = mc + 1;
+							}
+						else if (*two == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+							else if (*four == solution3)
+							{
+							mc = mc + 1;
+								if (*three == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+						}
+						else if (*two == solution1)
+						{
+						mc= mc+ 1;
+							if (*three == solution4)
+							{
+							mc =mc + 1;
+							}
+							if (*four == solution3)
+							{
+							mc = mc + 1;printf("%d\n",solution1);
+							}
+						}
+					}
+					else if (*one == solution3)
+					{
+					mc = mc + 1;
+						if (*three == solution2)
+						{
+						mc = mc + 1;
+							if (*two == solution4)
+							{
+							mc = mc + 1;
+								if (*four == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+							else if (*two == solution1)
+							{
+							mc = mc + 1;
+							}
+						else if (*three == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+							else if (*four == solution3)
+							{
+							mc = mc + 1;
+								if (*three == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+						}
+						else if (*three == solution1)
+						{
+						mc= mc+ 1;
+							if (*two == solution4)
+							{
+							mc =mc + 1;
+							}
+							if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+						}printf("%d\n",solution1);
+					}
+					else if (*one == solution4)
+					{
+					mc = mc + 1;
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+							if (*three == solution2)
+							{
+							mc = mc + 1;
+								if (*two == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+							else if (*three == solution1)
+							{
+							mc = mc + 1;
+							}
+						else if (*four == solution2)
+						{
+						mc = mc + 1;
+							if (*two == solution1)
+							{
+							mc = mc + 1;
+							}
+							else if (*two == solution3)
+							{
+							mc = mc + 1;
+								if (*three == solution1)
+								{
+								mc = mc + 1;
+								}
+							}
+						}
+						else if (*four == solution1)
+						{
+						mc= mc+ 1;
+							if (*three == solution2)
+							{
+							mc =mc + 1;
+							}
+							if (*two == solution3)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					printf("%d\n",solution1);
+					else if (*two == solution1)
+					{
+					mc = mc + 1;
+					printf("%d", mc);
+						if (*three == solution2)
+						{
+						mc = mc + 1;
+							if (*four == solution3)
+							{
+							mc = mc + 1;
+							}
+						}
+						else if (*three == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+							else if (*four == solution3)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					else if (*two == solution3)
+					{
+					mc = mc + 1;
+						if (*three == solution1)
+						{
+						mc = mc + 1;
+							if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+						}
+						else if (*three == solution2)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+						else if (*three == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+							else if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					else if (*two == solution4)
+					{
+					mc = mc + 1;
+						if (*three == solution1)
+						{
+						mc = mc + 1;
+							if (*four == solution2)
+							{
+							mc = mc + 1;
+							}
+							else if (*four == solution3)
+							{
+							mc = mc + 1;
+							}
+						}
+						else if (*three == solution2)
+						{printf("%d\n",solution1);
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+							if (*four == solution3)
+							{
+							mc = mc + 1;
+							}
+						}
+					else if (*three == solution1)
+					{
+					mc = mc + 1;
+						if (*four == solution2)
+						{
+						mc = mc + 1;
+						}
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+						}	
+					}
+					else if (*three == solution2)
+					{
+					mc = mc + 1;
+						if (*four == solution1)
+						{
+						mc = mc + 1;
+						}
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+						}	
+					}
+					else if (*three == solution4)
+					{
+					mc = mc + 1;
+						if (*four == solution1)
+						{
+						mc = mc + 1;
+						}
+						if (*four == solution3)
+						{
+						mc = mc + 1;
+						}
+						if (*four == solution2)
+						{
+						mc = mc + 1;
+						}	
+					}	
+					else if (*four == solution1)
+					{
+					mc = mc + 1;
+					}
+					else if (*four == solution2)
+					{
+					mc = mc + 1;
+					}
+					else if (*four == solution3)
+					{
+					mc = mc + 1;
+					}
+				}
+			}
+			else if (pp == 1)
+			{
+				if (ppp == 1 && pppp == 1)
+				{
+				mc = 0;
+				}
+				else if (ppp == 1 && pppp == 0)
+				{
+					if (*one == solution4)
+					{
+					mc = mc + 1;
+					}
+					if (*four == solution1)
+					{
+					mc = mc + 1;
+					}
+				}
+				else if (ppp == 0 && pppp == 1)
+				{
+					if (*one == solution3)
+					{
+					mc = mc + 1;
+					}
+					if (*three == solution1)
+					{
+					mc = mc + 1;
+					}
+				}
+				else
+				{
+					if (*one == solution3)
+					{
+					mc = mc + 1;
+						if (*three == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*three == solution4)
+						{
+						mc = mc + 1;
+							if (*four == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+					else if (*one == solution4)
+					{
+					mc = mc + 1;
+						if (*four == solution1)
+						{
+						mc = mc + 1;
+						}
+						else if (*four == solution3)
+						{
+						mc = mc + 1;
+							if (*three == solution1)
+							{
+							mc = mc + 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	}
+	}
+	}
+	printf("With guess %d, you got %d perfect matches and %d misplaced matches.\n", guess_number, pc, mc);
+	guess_number = guess_number + 1;
+		
+		
+}	
+	return r;
